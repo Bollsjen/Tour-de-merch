@@ -14,7 +14,7 @@ namespace Tour_de_merch.Pages.Koncerter
 
         IKoncertRepository repo;
 
-        [BindProperty] public Koncert koncert { get; set; }
+        [BindProperty] public Koncert Koncert { get; set; }
 
 
         public CreateKoncertModel(IKoncertRepository repo)
