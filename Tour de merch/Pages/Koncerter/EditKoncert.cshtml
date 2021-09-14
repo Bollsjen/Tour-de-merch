@@ -1,0 +1,41 @@
+﻿@page
+@model Tour_de_merch.Pages.Koncerter.EditKoncertModel
+@{
+    ViewData["Title"] = "Edit Koncert";
+}
+
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.Koncert.Id"/>
+    <input type="hidden" asp-for="@Model.Koncert.AntalItemsSolgt" />
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" value="@Model.Koncert.Title" class="form-control" id="title" asp-for="@Model.Koncert.Title" placeholder="Title goes here...">
+    </div>
+    <div class="form-group">
+        <select asp-for="@Model.Koncert.Turne">
+            @foreach(var kon in Model.Turneer)
+            {
+                if(kon.Value == Model.Koncert.Turne)
+                {
+                    <option value="kon" selected>kon.Value.Title</option>
+                }else{
+                    <option value="kon">kon.Value.Title</option>
+                }                    
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="KoncertDato">Koncert Dato</label>
+        <input type="date" value="@Model.Koncert.Date" class="form-control" id="KoncertDato" asp-for="@Model.Koncert.Date">
+    </div>
+    <div class="form-group">
+        <label for="by">By</label>
+        <input type="text" value="@Model.Koncert.By" class="form-control" id="by" asp-for="@Model.Koncert.By" placeholder="By goes here...">
+    </div>
+        <div class="form-group">
+        <label for="SpilleSted">Spille Sted</label>
+        <input type="text" value="@Model.Koncert.Spillested" class="form-control" id="SpilleSted" asp-for="@Model.Koncert.Spillested" placeholder="Spille Sted goes here...">
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>

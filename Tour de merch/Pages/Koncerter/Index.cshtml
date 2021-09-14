@@ -41,28 +41,28 @@
             @foreach(var koncert in Model.Koncerter.Values){
                 <tr>
                     <td scope="col">
-                        @koncert.Id
+                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Id</a>
                     </td>
                     <td scope="col">
-                         @koncert.Title
+                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Title</a>
                     </td>
                     <td scope="col">
-                         @koncert.Date
+                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Date</a>
                     </td>
                     <td scope="col">
-                         @koncert.By
+                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.By</a>
                     </td>
                     <td scope="col">
-                         @koncert.Spillested
+                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Spillested</a>
                     </td>
                     <td scope="col">
-                         @koncert.Turne
+                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Turne</a>
                     </td>
                     <td scope="col">
-                         @koncert.AntalItemsSolgt
+                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.AntalItemsSolgt</a>
                     </td>
                     <td scope="col">
-                         @koncert.Fortjeneste
+                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Fortjeneste</a>
                     </td>
                 </tr>
                 }            
