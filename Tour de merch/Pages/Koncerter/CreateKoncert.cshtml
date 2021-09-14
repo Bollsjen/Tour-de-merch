@@ -9,24 +9,29 @@
 <h1>Opret Koncert</h1>
 <form method="post">
     <div class="form-group">
-        <label asp-for="@Model.Koncert.Title" class="control-label ">Titel <b class="text-black">Titel</b> </label>
+        <label asp-for="@Model.Koncert.Title" class="control-label "><b class="text-black">Titel</b> </label>
         <input asp-for="@Model.Koncert.Title" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="@Model.Koncert.Date" class="control-label "> <b class="text-black">Dato</b> </label>
-        <input asp-for="@Model.Koncert.Date" class="form-control" />
+        <input type="date" asp-for="@Model.Koncert.Date" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="@Model.Koncert.By" class="control-label "> <b class="text-black">By</b> </label>
         <input asp-for="@Model.Koncert.By" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Koncert.Spillested" class="control-label "> <b class="text-black">By</b> </label>
+        <label asp-for="@Model.Koncert.Spillested" class="control-label "> <b class="text-black">Spillested</b> </label>
         <input asp-for="@Model.Koncert.Spillested" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="@Model.Koncert.Turne" class="control-label "> <b class="text-black">Turne</b> </label>
-        <input asp-for="@Model.Koncert.Turne" class="form-control" />
+        <select asp-for="@Model.Koncert.Turne">
+            @foreach(var kon in @Model.turneer.Values)
+            {
+                <option value="@kon">@kon.Navn</option>
+            }
+        </select>
     </div>
     @*<div class="form-group">
             <label asp-for="@Model.Koncert.TurnePlan" class="control-label "> <b class="text-white">Turne Plan</b> </label>

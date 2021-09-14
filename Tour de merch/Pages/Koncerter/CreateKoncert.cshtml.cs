@@ -13,19 +13,22 @@ namespace Tour_de_merch.Pages.Koncerter
     {
 
         IKoncertRepository repo;
+        ITurneRepository turRepo;
 
         [BindProperty] public Koncert Koncert { get; set; }
+        public Dictionary<int, Turne> turneer;
 
 
-        public CreateKoncertModel(IKoncertRepository repo)
+        public CreateKoncertModel(IKoncertRepository repo, ITurneRepository turRepo)
         {
             this.repo = repo;
+            this.turRepo = turRepo;
         }
 
 
         public void OnGet()
         {
-
+            turneer = turRepo.GetAllTurneer();
         }
 
         public IActionResult OnPost()
