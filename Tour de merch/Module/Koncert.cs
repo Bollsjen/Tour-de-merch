@@ -31,6 +31,5 @@ namespace Tour_de_merch.Module
                 return totalprofit;
             }
         }
-
     }
 }

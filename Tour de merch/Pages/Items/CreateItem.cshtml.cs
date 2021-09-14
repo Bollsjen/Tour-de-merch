@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Tour_de_merch.Interface;
+using Tour_de_merch.Module;
 
 namespace Tour_de_merch.Pages.Items
 {
@@ -21,7 +23,7 @@ namespace Tour_de_merch.Pages.Items
 
         public IActionResult OnGet()
         {
-            return Page();            r
+            return Page();            
         }
 
         public IActionResult OnPost()
@@ -31,7 +33,7 @@ namespace Tour_de_merch.Pages.Items
                 return Page();
             }
 
-            _items.CreateItem(Item);
+            _itemRepo.CreateItem(Item);
             return RedirectToPage("Index");
 
         }
