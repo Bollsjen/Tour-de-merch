@@ -1,0 +1,50 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Turnéer</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               ID
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Start Dato
+            </th>
+            <th>
+                Slut Dato
+            </th>
+            <th>
+                Fortjeneste
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var turne in Model.Turneer.Values){
+            <tr>
+                <td>
+                    @turne.ID
+                </td>
+                <td>
+                    @turne.Navn
+                </td>
+                <td>
+                    @turne.TurneStart
+                </td>
+                <td>
+                    @turne.TurneSlut
+                </td>
+                <td>
+                    @turne.Fortjeneste
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

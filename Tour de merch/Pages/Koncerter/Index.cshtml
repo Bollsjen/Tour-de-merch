@@ -1,0 +1,71 @@
+﻿@page
+@model Tour_de_merch.Pages.Koncerter.IndexModel
+@{
+    ViewData["Title"] = "Koncert Katalog";
+}
+
+<h1>Koncerter</h1>
+<a class="btn btn-primary" asp-page="CreateKoncert">Create Koncert</a>
+
+<div>
+    <table class="table">
+        <thead class="">
+            <tr>
+                <th scope="col">
+                    ID
+                </th>
+                <th scope="col">
+                    Titel
+                </th>
+                <th scope="col">
+                    Dato
+                </th>
+                <th scope="col">
+                    By
+                </th>
+                <th scope="col">
+                    Spille sted
+                </th>
+                <th scope="col">
+                    Turné
+                </th>
+                <th scope="col">
+                    Antal Items Solgt
+                </th>
+                <th scope="col">
+                    Samlet Fortjeneste
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var koncert in Model.Koncerter.Values){
+                <tr>
+                    <td scope="col">
+                        @koncert.Id
+                    </td>
+                    <td scope="col">
+                         @koncert.Title
+                    </td>
+                    <td scope="col">
+                         @koncert.Date
+                    </td>
+                    <td scope="col">
+                         @koncert.By
+                    </td>
+                    <td scope="col">
+                         @koncert.Spillested
+                    </td>
+                    <td scope="col">
+                         @koncert.Turne
+                    </td>
+                    <td scope="col">
+                         @koncert.AntalItemsSolgt
+                    </td>
+                    <td scope="col">
+                         @koncert.Fortjeneste
+                    </td>
+                </tr>
+                }            
+        </tbody>
+    </table>
+</div>

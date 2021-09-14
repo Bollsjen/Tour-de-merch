@@ -1,0 +1,24 @@
+﻿@page
+@model Tour_de_merch.Pages.CreateTurneModel
+@{
+    ViewData["Title"] = "Create Turne";
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="TurneTitle">Turne Titel</label>
+        <input type="text" id="TurneTitle" class="form-control" asp-for="@Model.turne.Navn" placeholder="name@example.com">
+        <span asp-validation-for="@Model.turne.Navn"  class="text-danger"></span>
+    </div>
+        <div class="form-group">
+        <label for="TurneStart">Turne Titel</label>
+        <input type="date" id="TurneStart" class="form-control" asp-for="@Model.turne.TurneStart" placeholder="name@example.com">
+        <span asp-validation-for="@Model.turne.TurneStart"  class="text-danger"></span>
+    </div>
+        <div class="form-group">
+        <label for="TurneSlut">Turne Titel</label>
+        <input type="text" id="TurneSlut" class="form-control" asp-for="@Model.turne.TurneSlut" placeholder="name@example.com">
+        <span asp-validation-for="@Model.turne.TurneSlut"  class="text-danger"></span>
+    </div>
+    <input type="submit" name="CreateTurne" value="Create Turné" />
+</form>

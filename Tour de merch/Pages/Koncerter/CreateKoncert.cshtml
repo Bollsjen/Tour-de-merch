@@ -1,0 +1,15 @@
+﻿@page
+@model Tour_de_merch.Pages.Koncerter.CreateKoncertModel
+@{
+    ViewData["Title"] = "Create Koncert";
+}
+
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="Titel" class="control-label"> Titel </label>
+        <input asp-for="" class="form-control" />
+        <span asp-validation-for="" class="text-danger"></span>
+
+    </div>

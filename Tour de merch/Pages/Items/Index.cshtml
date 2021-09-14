@@ -1,0 +1,33 @@
+﻿@page
+@model Tour_de_merch.Pages.Items.IndexModel
+@{
+}
+
+<h1>Items</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Titel</th>
+        <th scope="col">Størrelse</th>
+        <th scope="col">Pris</th>
+        <th scope="col">På Lager</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach(var item in Model.Items.Values){
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Titel</td>
+            <td>@item.Størrelse</td>
+            <td>
+                @item.Pris
+            </td>
+            <td>
+                @item.PåLager
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
