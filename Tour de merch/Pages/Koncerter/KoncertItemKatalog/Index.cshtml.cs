@@ -26,7 +26,6 @@ namespace Tour_de_merch.Pages.Koncerter.KoncertItemKatalog
         public void OnGet(int id)
         {
             koncert = repository.GetKoncert(id);
-            int 0;
         }
     }
 }
