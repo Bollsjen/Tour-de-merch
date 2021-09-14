@@ -5,7 +5,9 @@
 }
 
 <h1>Koncerter</h1>
-<a class="btn btn-primary" asp-page="CreateKoncert">Create Koncert</a>
+@*<a class="btn btn-primary" asp-page="CreateKoncert">Create Concert</a>*@
+@*<h1 class="text-center">Create Concert</h1>*@
+<h2><a class="btn" type="button" asp-page="CreateKoncert"><i class="fa fa-plus"></i> <b>Create Concert</b></a></h2>
 
 <div>
     <table class="table">
@@ -38,34 +40,35 @@
             </tr>
         </thead>
         <tbody>
-            @foreach(var koncert in Model.Koncerter.Values){
+            @foreach (var koncert in Model.Koncerter.Values)
+            {
                 <tr>
                     <td scope="col">
                         @koncert.Id
                     </td>
                     <td scope="col">
-                         @koncert.Title
+                        @koncert.Title
                     </td>
                     <td scope="col">
-                         @koncert.Date
+                        @koncert.Date
                     </td>
                     <td scope="col">
-                         @koncert.By
+                        @koncert.By
                     </td>
                     <td scope="col">
-                         @koncert.Spillested
+                        @koncert.Spillested
                     </td>
                     <td scope="col">
-                         @koncert.Turne
+                        @koncert.Turne
                     </td>
                     <td scope="col">
-                         @koncert.AntalItemsSolgt
+                        @koncert.AntalItemsSolgt
                     </td>
                     <td scope="col">
-                         @koncert.Fortjeneste
+                        @koncert.Fortjeneste
                     </td>
                 </tr>
-                }            
+            }
         </tbody>
     </table>
 </div>

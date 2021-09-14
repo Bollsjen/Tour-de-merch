@@ -5,12 +5,15 @@
 }
 
 <h1>Turnéer</h1>
-<a class="btn btn-primary" asp-page="CreateTurne">Create Turné</a>
+@*<a class="btn btn-primary" asp-page="CreateTurne">Create Turné</a>*@
+
+<h2><a class="btn" type="button" asp-page="CreateTurne"><i class="fa fa-plus"></i> <b>Create Turné</b></a></h2>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-               ID
+                ID
             </th>
             <th>
                 Title
@@ -27,7 +30,8 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var turne in Model.Turneer.Values){
+        @foreach (var turne in Model.Turneer.Values)
+        {
             <tr>
                 <td>
                     @turne.ID
