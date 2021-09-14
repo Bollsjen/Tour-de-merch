@@ -7,17 +7,17 @@
 <form method="post">
     <div class="form-group">
         <label for="TurneTitle">Turne Titel</label>
-        <input type="text" id="TurneTitle" class="form-control" asp-for="@Model.turne.Navn" placeholder="name@example.com">
+        <input type="text" id="TurneTitle" class="form-control" asp-for="@Model.turne.Navn" placeholder="Title here">
         <span asp-validation-for="@Model.turne.Navn"  class="text-danger"></span>
     </div>
-        <div class="form-group">
-        <label for="TurneStart">Turne Titel</label>
-        <input type="date" id="TurneStart" class="form-control" asp-for="@Model.turne.TurneStart" placeholder="name@example.com">
+    <div class="form-group">
+        <label for="TurneStart">Turne Start Dato</label>
+        <input type="date" id="TurneStart" class="form-control" asp-for="@Model.turne.TurneStart">
         <span asp-validation-for="@Model.turne.TurneStart"  class="text-danger"></span>
     </div>
         <div class="form-group">
-        <label for="TurneSlut">Turne Titel</label>
-        <input type="text" id="TurneSlut" class="form-control" asp-for="@Model.turne.TurneSlut" placeholder="name@example.com">
+        <label for="TurneStart">Turne Slut Dato</label>
+        <input type="date" id="TurneSlut" class="form-control" asp-for="@Model.turne.TurneSlut">
         <span asp-validation-for="@Model.turne.TurneSlut"  class="text-danger"></span>
     </div>
     <input type="submit" name="CreateTurne" value="Create Turné" />
