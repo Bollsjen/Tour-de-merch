@@ -3,9 +3,11 @@
 @{
 }
 
-<h1>Items</h1>
 
-<a class="btn btn-primary" asp-page="CreateItem">Create Item</a>
+<h1>Items</h1>
+<h2><a class="btn" type="button" asp-page="CreateItem"><i class="fa fa-plus"></i> <b>Create Item</b></a></h2>
+
+
 
 <table class="table">
     <thead>
@@ -16,28 +18,28 @@
             <th scope="col">Pris</th>
             <th scope="col">På Lager</th>
         </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Items.Values)
-                    {
-                        <tr>
-                            <td scope="col">
-                                @item.Id
-                            </td>
-                            <td scope="col">
-                                @item.Titel
-                            </td>
-                            <td scope="col">
-                                @item.Størrelse
-                            </td>
-                            <td scope="col">
-                                @item.Pris
-                            </td>
-                            <td scope="col">
-                                @item.PåLager
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-    
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items.Values)
+        {
+            <tr>
+                <td scope="col">
+                    @item.Id
+                </td>
+                <td scope="col">
+                    @item.Titel
+                </td>
+                <td scope="col">
+                    @item.Størrelse
+                </td>
+                <td scope="col">
+                    @item.Pris
+                </td>
+                <td scope="col">
+                    @item.PåLager
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

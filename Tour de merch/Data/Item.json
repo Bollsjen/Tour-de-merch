@@ -7,5 +7,14 @@
     "Pris": 450.0,
     "Titel": "Items",
     "PåLager": 5
+  },
+  "2": {
+    "Id": 2,
+    "MoreItems": null,
+    "Dato": "2021-09-14T11:39:00",
+    "Størrelse": "Large",
+    "Pris": 500.0,
+    "Titel": "Items 1",
+    "PåLager": 10
   }
 }
