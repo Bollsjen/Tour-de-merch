@@ -30,7 +30,7 @@ namespace Tour_de_merch.Pages.Koncerter
 
         public IActionResult OnPost()
         {
-            repo.CreateKoncert(koncert);
+            repo.CreateKoncert(Koncert);
             return RedirectToPage("Index");
         }
     }
