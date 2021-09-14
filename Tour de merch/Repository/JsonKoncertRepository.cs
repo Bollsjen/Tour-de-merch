@@ -65,5 +65,10 @@ namespace Tour_de_merch.Repository
             KoncertList[item.Id] = item;
             JsonReadWrite.JsonWrite(KoncertList, JsonLocation);
         }
+
+        public void SellItem(int KoncertID, Item item, int Amount)
+        {
+            GetKoncert(KoncertID).AntalItemsSolgt[item] += Amount;
+        }
     }
 }
