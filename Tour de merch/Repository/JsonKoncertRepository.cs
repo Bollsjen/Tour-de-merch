@@ -33,6 +33,7 @@ namespace Tour_de_merch.Repository
         {
             Dictionary<int, Koncert> KoncertList = GetAllKoncerts();
             item.Id = FindID();
+            item.AntalItemsSolgt = new Dictionary<Item, int>();
             KoncertList.Add(item.Id, item);
             JsonReadWrite.JsonWrite(KoncertList, JsonLocation);
         }
