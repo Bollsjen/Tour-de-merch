@@ -31,16 +31,5 @@ namespace Tour_de_merch.Module
                 return totalprofit;
             }
         }
-
-        public double profit { get
-            {
-                double totalprofit = 0;
-                foreach(var i in AntalItemsSolgt)
-                {
-                    totalprofit += i.Key.Pris * i.Value;
-                }
-                return totalprofit;
-            } }
-
     }
 }
