@@ -20,5 +20,15 @@ namespace Tour_de_merch.Module
         public double Fortjeneste { get; set; }
         public Dictionary<Item, int> AntalItemsSolgt { get; set; }
 
+        public double profit { get
+            {
+                double totalprofit = 0;
+                foreach(var i in AntalItemsSolgt)
+                {
+                    totalprofit += i.Key.Pris * i.Value;
+                }
+                return totalprofit;
+            } }
+
     }
 }

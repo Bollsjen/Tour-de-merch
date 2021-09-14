@@ -14,6 +14,7 @@ namespace Tour_de_merch.Interface
         public void DeleteKoncert(int ID);
         public void UpdateKoncert(Koncert item);
         public void CreateKoncert(Koncert item);
+        public void SellItem(int KoncertID, Item item, int Amount);
         public int FindID();
     }
 }
