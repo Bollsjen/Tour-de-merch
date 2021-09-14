@@ -1,3 +1,11 @@
 {
-
+  "1": {
+    "Id": 1,
+    "MoreItems": null,
+    "Dato": "2021-09-15T11:34:00",
+    "Størrelse": "Medium",
+    "Pris": 450.0,
+    "Titel": "Items",
+    "PåLager": 5
+  }
 }
