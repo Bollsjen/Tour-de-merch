@@ -1,4 +1,62 @@
 ﻿@page
 @model Tour_de_merch.Pages.Koncerter.KoncertItemKatalog.IndexModel
 @{
+    ViewData["Title"] = "KoncertItemKatalog";
 }
+
+
+<h1>KoncertItemKatalog</h1>
+
+<tabel>
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Størrelse
+            </th>
+            <th>
+                Pris
+            </th>
+            <th>
+                PåLager
+            </th>
+            <th>
+                Fortjeneste
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.koncert.AntalItemsSolgt)
+            {
+        <tr>
+            <td>
+                @i.Key.Id
+            </td>
+            <td>
+                @i.Key.Titel
+            </td>
+            <td>
+                @i.Key.Størrelse
+            </td>
+            <td>
+                @i.Key.Pris
+            </td>
+
+            <td>
+                @i.Key.PåLager
+            </td>
+            <td>
+
+                @{
+                i.Key.Pris * i.Value
+                }
+            </td>
+        </tr>
+            }
+    </tbody>
+</tabel>
