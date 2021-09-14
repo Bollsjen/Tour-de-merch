@@ -1,0 +1,22 @@
+﻿@page
+@model Tour_de_merch.Pages.EditTurneModel
+@{
+    ViewData["Title"] = "Edit Turne";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.Turne.ID"/>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" value="@Model.Turne.Navn" class="form-control" id="title" asp-for="@Model.Turne.Navn" placeholder="Title goes here...">
+    </div>
+    <div class="form-group">
+        <label for="TurneStart">Turne Start</label>
+        <input type="date" value="@Model.Turne.TurneStart" class="form-control" id="TurneStart" asp-for="@Model.Turne.TurneStart">
+    </div>
+    <div class="form-group">
+        <label for="TurneSlut">Turne Slut</label>
+        <input type="date" value="@Model.Turne.TurneSlut" class="form-control" id="TurneSlut" asp-for="@Model.Turne.TurneSlut">
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
