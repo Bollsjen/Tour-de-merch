@@ -24,25 +24,31 @@
             <th>
                 Fortjeneste
             </th>
+            <th>
+                
+            </th>
         </tr>
     </thead>
     <tbody>
         @foreach(var turne in Model.Turneer.Values){
             <tr>
                 <td>
-                    <a asp-page="EditTurne" asp-route-id="@turne.ID">@turne.ID</a>
+                    @turne.ID
                 </td>
                 <td>
-                    <a asp-page="EditTurne" asp-route-id="@turne.ID">@turne.Navn</a>
+                    @turne.Navn
                 </td>
                 <td>
-                    <a asp-page="EditTurne" asp-route-id="@turne.ID">@turne.TurneStart</a>
+                    @turne.TurneStart
                 </td>
                 <td>
-                    <a asp-page="EditTurne" asp-route-id="@turne.ID">@turne.TurneSlut</a>
+                    @turne.TurneSlut
                 </td>
                 <td>
-                    <a asp-page="EditTurne" asp-route-id="@turne.ID">@turne.Fortjeneste</a>
+                    @turne.Fortjeneste
+                </td>
+                <td>
+                    <a asp-page="EditTurne" asp-route-id="@turne.ID" class="btn btn-success">Edit</a>
                 </td>
             </tr>
         }

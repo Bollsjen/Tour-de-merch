@@ -35,34 +35,38 @@
                 <th scope="col">
                     Samlet Fortjeneste
                 </th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach(var koncert in Model.Koncerter.Values){
                 <tr>
                     <td scope="col">
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Id</a>
+                        @koncert.Id
                     </td>
                     <td scope="col">
-                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Title</a>
+                         @koncert.Title
                     </td>
                     <td scope="col">
-                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Date</a>
+                         @koncert.Date
                     </td>
                     <td scope="col">
-                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.By</a>
+                         @koncert.By
                     </td>
                     <td scope="col">
-                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Spillested</a>
+                         @koncert.Spillested
                     </td>
                     <td scope="col">
-                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Turne</a>
+                         @koncert.Turne
                     </td>
                     <td scope="col">
-                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.AntalItemsSolgt</a>
+                         nan
                     </td>
                     <td scope="col">
-                         <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Fortjeneste</a>
+                         @koncert.Fortjeneste
+                    </td>
+                    <td>
+                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id" class="btn btn-success">Edit</a>
                     </td>
                 </tr>
                 }            
