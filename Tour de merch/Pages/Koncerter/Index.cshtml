@@ -48,7 +48,6 @@
                         @koncert.Id
                     </td>
                     <td scope="col">
-<<<<<<< HEAD
                          @koncert.Title
                     </td>
                     <td scope="col">
@@ -70,29 +69,9 @@
                          @koncert.Fortjeneste
                     </td>
                     <td>
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id" class="btn btn-success">Edit</a>
-=======
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Title</a>
+                     <a asp-page="EditKoncert" asp-route-id="@koncert.Id" class="btn btn-success">Edit</a>
                     </td>
-                    <td scope="col">
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Date</a>
-                    </td>
-                    <td scope="col">
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.By</a>
-                    </td>
-                    <td scope="col">
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Spillested</a>
-                    </td>
-                    <td scope="col">
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Turne</a>
-                    </td>
-                    <td scope="col">
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.AntalItemsSolgt</a>
-                    </td>
-                    <td scope="col">
-                        <a asp-page="EditKoncert" asp-route-id="@koncert.Id">@koncert.Fortjeneste</a>
->>>>>>> 51c472a21e6415c312cd3ccdf95a26e8e2441bc4
-                    </td>
+          
                 </tr>
             }
             </tbody>
