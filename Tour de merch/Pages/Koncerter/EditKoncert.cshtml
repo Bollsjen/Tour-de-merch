@@ -13,21 +13,21 @@
         <input type="text" value="@Model.Koncert.Title" class="form-control" id="title" asp-for="@Model.Koncert.Title" placeholder="Title goes here...">
     </div>
     <div class="form-group">
-        <select asp-for="@Model.Koncert.Turne">
+        <select asp-for="@Model.Turne">
             @foreach(var kon in Model.Turneer)
             {
                 if(kon.Value == Model.Koncert.Turne)
                 {
-                    <option value="kon" selected>kon.Value.Title</option>
+                    <option value="@kon.Value.ID" selected>@kon.Value.Navn</option>
                 }else{
-                    <option value="kon">kon.Value.Title</option>
+                    <option value="@kon.Value.ID">@kon.Value.Navn</option>
                 }                    
             }
         </select>
     </div>
     <div class="form-group">
         <label for="KoncertDato">Koncert Dato</label>
-        <input type="date" value="@Model.Koncert.Date" class="form-control" id="KoncertDato" asp-for="@Model.Koncert.Date">
+        <input type="date" value="@Model.Koncert.Date.ToString("dd.mm.yyyy")" class="form-control" id="KoncertDato" asp-for="@Model.Koncert.Date">
     </div>
     <div class="form-group">
         <label for="by">By</label>

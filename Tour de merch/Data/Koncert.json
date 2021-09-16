@@ -5,7 +5,15 @@
     "Date": "0001-01-01T00:00:00",
     "By": "Stenløse",
     "Spillested": "Gamle Rådhus",
-    "Turne": null,
+    "Turne": {
+      "ID": 2,
+      "AutoId": 0,
+      "Navn": "Euro World Wide",
+      "TurnePlan": null,
+      "TurneStart": "2021-09-14T00:00:00",
+      "TurneSlut": "2021-09-15T00:00:00",
+      "Fortjeneste": 0.0
+    },
     "TurnePlan": null,
     "Fortjeneste": 0.0,
     "AntalItemsSolgt": {},

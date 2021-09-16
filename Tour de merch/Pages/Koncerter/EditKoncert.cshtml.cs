@@ -14,6 +14,7 @@ namespace Tour_de_merch.Pages.Koncerter
         IKoncertRepository repo;
         ITurneRepository turRepo;
         [BindProperty] public Koncert Koncert { get; set; }
+        [BindProperty]public int Turne { get; set; }
         public Dictionary<int, Turne> Turneer { get; set; }
         public EditKoncertModel(IKoncertRepository repo, ITurneRepository turRepo)
         {
@@ -29,6 +30,7 @@ namespace Tour_de_merch.Pages.Koncerter
 
         public IActionResult OnPost()
         {
+            Koncert.Turne = turRepo.GetTurne(Turne);
             repo.UpdateKoncert(Koncert);
             return RedirectToPage("Index");
         }
